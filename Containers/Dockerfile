@@ -20,6 +20,8 @@ RUN apt-get update --yes && \
     echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
 RUN pip install jupyterlab ipywidgets jupyter-archive
 
+RUN mkdir workspace
+
 ADD start.sh .
 
 RUN chmod +x start.sh
