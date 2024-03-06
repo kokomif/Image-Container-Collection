@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./Containers/runpod-cpu/Dockerfile
+          file: ./Containers/runpod-cpu/
           platforms: linux/amd64
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/runpod-cpu:1.0
