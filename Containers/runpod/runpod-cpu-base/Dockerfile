@@ -22,7 +22,9 @@ RUN pip install jupyterlab ipywidgets jupyter-archive
 
 RUN mkdir workspace
 
-ADD start.sh .
+#For Local RUN ADD start.sh .
+
+ADD ./Containers/runpod-cpu/start.sh .
 
 RUN chmod +x start.sh
 
