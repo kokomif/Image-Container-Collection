@@ -122,6 +122,7 @@
         gnupg \
         cifs-utils \
         zlib1g \
+        aria2 \
         software-properties-common
 
 # ==================================================================
@@ -257,6 +258,32 @@
         gradient==2.0.6
     RUN $PIP_INSTALL attrs==23.1.0
 
+# ==================================================================
+# Installing A1111 & Comfyui Dependency
+# ------------------------------------------------------------------
+
+    RUN $PIP_INSTALL \
+        GitPython \
+        blendmodes \
+        clean-fid \
+        einops \
+        fastapi>=0.90.1 \
+        gradio==3.41.2 \
+        inflection \
+        jsonmerge \
+        kornia \
+        lark \
+        open-clip-torch \
+        piexif \
+        psutil \
+        pytorch_lightning \
+        requests \
+        resize-right \
+        scikit-image>=0.19 \
+        tomesd \
+        torchdiffeq \
+        torchsde \
+        aiohttp 
 
 # ==================================================================
 # Installing JRE and JDK

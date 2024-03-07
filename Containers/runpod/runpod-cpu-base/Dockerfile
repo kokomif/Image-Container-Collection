@@ -24,7 +24,7 @@ RUN mkdir workspace
 
 #For Local RUN ADD start.sh .
 
-ADD ./Containers/runpod-cpu/start.sh .
+ADD ./Containers/runpod/runpod-cpu-base/start.sh .
 
 RUN chmod +x start.sh
 

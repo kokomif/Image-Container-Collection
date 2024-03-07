@@ -4,6 +4,8 @@ This repo houses a Dockerfile used to create an image used for Gradient runtimes
  
 The goal of this image is to provide common packages for an advanced data science user that allows them to utilize the GPU hardware on Gradient. This image targets popular Machine Learning frameworks and includes packages commonly used for Computer Vision and Natural Language Processing tasks as well as general Data Science work.
 
+With Extra A1111 and ComfyUI dependency
+
 
 ## Software included
 
@@ -49,6 +51,29 @@ The goal of this image is to provide common packages for an advanced data scienc
 |                  | Datasets         | 2.14.5                 | pip3           | A supporting library for NLP use cases and the Transformers library brought to you by HuggingFace |
 |                  | XGBoost          | 1.7.6                  | pip3           | An optimized distributed gradient boosting library |
 |                  | Sentence Transformers | 2.2.2             | pip3           | A ML framework for sentence, paragraph and image embeddings |
+| A1111 and ComfyUI Dependency | GitPython |                   | pip3           | |
+|                  | GitPython |                   | pip3           | |
+|                  | blendmodes |                   | pip3           | |
+|                  | clean-fid |                   | pip3           | |
+|                  | einops |                   | pip3           | |
+|                  | fastapi | >=0.90.1                  | pip3           | |
+|                  | gradio | 3.41.2                  | pip3           | |
+|                  | inflection |                   | pip3           | |
+|                  | jsonmerge |                   | pip3           | |
+|                  | kornia |                   | pip3           | |
+|                  | lark |                   | pip3           | |
+|                  | open-clip-torch |                   | pip3           | |
+|                  | piexif |                   | pip3           | |
+|                  | psutil |                   | pip3           | |
+|                  | pytorch_lightning |                   | pip3           | |
+|                  | requests |                   | pip3           | |
+|                  | resize-right |                   | pip3           | |
+|                  | scikit-image | >=0.19                | pip3           | |
+|                  | tomesd |                   | pip3           | |
+|                  | torchdiffeq |                   | pip3           | |
+|                  | torchsde |                   | pip3           | |
+|                  | aiohttp |                   | pip3           | |
+
 
 ### Licenses
 
