@@ -1,4 +1,4 @@
-name: Docker Image Runpod-CPU CI
+name: Paperspace Base Container Image Docker Cloud Build  CI
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  docker:
     runs-on: ubuntu-latest
     steps:
       -
@@ -22,12 +22,17 @@ jobs:
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
+        with:
+          version: "lab:latest"
+          driver: cloud
+          endpoint: "asahina2k/asahina"
       -
         name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./Containers/runpod/runpod-cpu-base/Dockerfile
+          file: ./Containers/paperspace/base-container/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/runpod-cpu:1.0
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/paperspace_sd_base:latest
+          outputs: ${{ github.event_name == 'pull_request' && 'type=cacheonly' || 'type=registry,push=true' }}
